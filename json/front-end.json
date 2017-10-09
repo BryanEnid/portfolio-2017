@@ -1,0 +1,22 @@
+[
+  {
+    "name":"to-galactic-do",
+    "previewPic": "galacticdo.png",
+    "description": "To-Do List made with Vanilla Javascript"
+  },
+  {
+    "name":"randomgame",
+    "previewPic": "random.png",
+    "description": "Random animals made with Vanilla JavaScript"
+  },
+  {
+    "name":"drawing_canvas",
+    "previewPic": "paper.png",
+    "description": "Draw in the Paper! Vanilla JavaScript"
+  },
+  {
+    "name":"lines",
+    "previewPic": "lines.png",
+    "description": "While loop drawing lines Vanilla JavaScript"
+  }
+]

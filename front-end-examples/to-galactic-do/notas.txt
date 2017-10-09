@@ -1,0 +1,37 @@
+getElementsByTagName("LI")
+
+getElementsByTagName("addInput").value
+Esto toma el valor de la entrada.
+
+event.keyCode == 13
+Revisa si el teclado "Enter" fue accionado
+
+document.createElement("LI")
+Crea cualquier etiqueta HTML
+
+var.className = "dlt"
+agrega al objeto una clase.
+
+document.createTextNode(value);
+Convierte el texto HTML en plano
+
+node.appendChild(text);
+Inyecta una variable a un nodo de etiqueta HTML.
+
+span.onclick = function() {}
+Agrega una accion a un objeto
+
+this.parentElement
+Seleciona el padre del objeto actual
+
+remove();
+funcion de eliminar
+
+myul.childNodes
+Revisa cuantos nodos de HTML se encuentran.
+
+&times
+escribe en html una "X"
+
+.addEventListener('click',function)
+agrega una funcion que acciona con click a un objeto

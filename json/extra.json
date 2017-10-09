@@ -1,0 +1,14 @@
+[
+  {
+    "image": "to-do-list.png",
+    "name": "To do List made with vanilla JS"
+  },
+  {
+    "image": "to-do-list.png",
+    "name": "To do List made with JQuery"
+  },
+  {
+    "image": "drawingCanvas.png",
+    "name": "Paint"
+  }
+]

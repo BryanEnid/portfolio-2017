@@ -1,0 +1,155 @@
+/* Scroll Bar */
+article::-webkit-scrollbar {
+  width: 40px;
+}
+article::-webkit-scrollbar-thumb {
+  background: #669999;
+  border: 17px #85adad solid;
+  border-radius: 30px;
+}
+
+
+/* Layout */
+body {
+	background: #00131a url(../images/background.svg) center repeat-y;
+	overflow: hidden;
+}
+
+.marginbox {
+  width: 900px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+.clear {
+  clear: both;
+}
+
+
+header {
+  width: :660px;
+  height: 25px;
+  background: #669999;
+  padding: 18px 120px 12px 120px;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 1px solid orange;
+}
+
+article {
+  width: 750px;
+  height: 400px;
+  background: #85adad;
+  border-radius: 0 0 5px 5px;
+  padding: 15px 50px 15px 100px;
+  overflow: auto;
+}
+
+#ready {
+  background: orange;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  border-radius: 5px 0 0 0;
+  padding: 2px 0 0 0 ;
+  color: black;
+}
+/* Layout */
+
+
+
+
+
+
+
+
+
+/* elements input, botton, list, input bar + btn */
+#addInput {
+  padding: 3px 25px 0 25px;
+  float: left;
+  height: 20px;
+  border-radius: 5px 0 0 5px ;
+  border: none;
+  color: orange;
+  display: inline;
+  width: 75%;
+	cursor: pointer;
+}
+#addInput:hover {
+  background: #eff5f5;
+}
+
+#addInput:focus {
+  background: #eff5f5;
+}
+
+#addBtn {
+  width: 17%;
+  float: left;
+  background: #666;
+  height: 23px;
+  padding: 5px 35px;
+  border-radius: 0 5px 5px 0 ;
+  color: white;
+  text-decoration: none;
+  border: none;
+	cursor: pointer;
+}
+
+
+#addBtn:hover {
+  background: #555;
+}
+
+.dlt {
+	margin-left: 15px;
+  color: #00131a;
+	font-weight: bold;
+  float: right;
+  font-size: 15px;
+  line-height: 15px;
+  cursor: pointer;
+}
+
+.dlt:hover {
+	color: orange;
+}
+
+/* List */
+ul li {
+  list-style: none;
+  padding: 5px 10px 5px 30px;
+  background: #c2d6d6;
+  margin: 13px 0 ;
+  border-radius: 5px;
+  color: #204060;
+  transition: 0.2s;
+  display:block;
+  word-break: break-word;
+	cursor: pointer;
+}
+
+ul li:hover {
+  text-decoration:none;
+  background: #d0e1e1;
+  color: #3973ac;
+}
+
+.checked {
+  color: grey;
+	text-decoration: line-through;
+}
+
+.checked:hover {
+  color: grey;
+	text-decoration: line-through;
+}
+/* .done style */
+ul li.done {
+  background: #00131a;
+  color: #00384d;
+  text-decoration: line-through;
+}
+
+/* .done style */

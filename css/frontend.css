@@ -1,0 +1,72 @@
+
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  text-align: center;
+}
+
+span.tload {
+  font-family: 'Comfortaa', cursive;
+  text-align: center;
+  position: absolute;
+  left: -5px;
+}
+
+.file {
+  display: block;
+  float: left;
+  margin: 30px 0 30px 37px;
+  text-align: center;
+}
+
+.file {
+  list-style: none;
+}
+
+.file img {
+  height: 129px;
+  width: 180px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: 0.2s;
+}
+
+.file img:hover {
+  opacity: 0.7;
+}
+
+.file p {
+  cursor: default;
+  font-family: 'Comfortaa', bold;
+  width: 200px;
+  margin: 10px 0 0 0;
+}
+
+img::selection, p::selection {
+    background-color: transparent;
+    color: #000;
+}
+
+.btnWindow, .btnTab {
+  border: 1px black solid;
+  background: white;
+  border-radius: 4px;
+  margin: 1px;
+  transition: 0.3s;
+  opacity: 0.7;
+}
+
+.btnWindow:hover, .btnTab:hover {
+  transition: 0.3s;
+  opacity: 1;
+}
+
+.btnWindow:active, .btnTab:active {
+  color:white;
+  background: white;
+  border: 1px solid grey;
+}

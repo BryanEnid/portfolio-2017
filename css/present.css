@@ -1,0 +1,32 @@
+#present {
+  font-family: 'Comfortaa', cursive;
+}
+
+#present p {
+  text-indent: 70px;
+  line-height: 20px;
+  width: 800px;
+  margin: 10px auto;
+}
+
+
+#present .icon {
+  font-size: 60px;
+}
+
+#present h2 {
+  font-size: 20px;
+  width: 580px;
+  margin: 15px auto;
+  font-weight: bold;
+}
+
+#present .exp, #present .bexp {
+  width: 580px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+#present span {
+  font-weight: bold;
+}

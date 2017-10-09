@@ -1,0 +1,351 @@
+@charset "UTF-8";
+
+/* No select*/
+img::-moz-selection {
+    background-color: transparent;
+    color: #000;
+}
+
+img::selection {
+    background-color: transparent;
+    color: #000;
+}
+
+html {
+  background: #006699;
+}
+/*  top bar */
+
+header {
+  position: relative;
+  height: 1035px;
+}
+
+div.bar {
+  position: absolute;
+  top: 0px;
+  height: 20px;
+  width: 100%;
+  padding-top: 5px;
+  background: #444;
+  opacity: 0.8;
+}
+
+.left {
+  float: left;
+  margin: 0 5px 0 20px;
+  color: white;
+  margin-top: -1px;
+}
+
+.ubuntu {
+  float: left;
+  margin: 0 5px 0 20px;
+  color: white;
+  margin-top: 1px;
+  font-family: 'Mukta', sans-serif;
+}
+
+.top {
+  float: right;
+  margin-right: 10px;
+  margin-top: -1px;
+  color: white;
+}
+
+#clock {
+  margin: 0 25px 0 10px;
+  margin-top: 1px;
+  color: white;
+  font-family: 'Mukta', sans-serif;
+}
+
+/* Folder icons UI*/
+
+.folderIco {
+  width: 64px;
+  height: 64px;
+  z-index: 10;
+  transition: 0.1s;
+}
+
+/*.folderIco:hover {
+  transform: scale(1.05,1.05);
+}*/
+
+.folderIco:active {
+  transform: scale(0.93,0.93);
+}
+
+#positionFolder1, #positionFolder2, #positionFolder3 {
+  width: 100px;
+  height: 80px;
+  position: absolute;
+  right: 65px;
+  top: 120px;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+  font-family: 'Comfortaa', cursive;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+#positionFolder2 {
+  top: 240px;
+}
+#positionFolder3 {
+  top: 360px;
+}
+
+
+/* background SVG */
+
+.background {
+  position: absolute;
+  width: 100%;
+  bottom: 0%;
+  height: 900px;
+  background: url(../image/bg_index.svg) repeat-x bottom;
+  z-index: -100;
+}
+
+/*
+  Bryan Picture
+*/
+
+.headerPic img {
+  height: 180px;
+  width: 180px;
+  display: block;
+  border-radius: 50%;
+  float: left;
+  position: relative;
+  top: 29%;
+  left: 14%;
+}
+
+.headerPic {
+  width: 990px;
+  margin:0 auto;
+  height: 430px;
+  position: relative;
+}
+
+/*
+  Font style for Web Prorgammer and Designer
+*/
+
+.consoleType {
+  font-family: monospace;
+  background: black;
+  display: inline;
+  color: #00b300;
+  padding: 3px 6px 3px 6px;
+  border-radius: 3px;
+}
+
+.fancy {
+  font-family: 'Poiret One', cursive;
+  display: inline;
+  color: white;
+  font-size: 25px;
+  padding-top: 10px;
+}
+
+.headerPic h1 {
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Comfortaa', cursive;
+  color: white;
+}
+
+.headerPic h2 {
+  font-size: 20px;
+  position: absolute;
+  top: 60%;
+  left: 66%;
+  transform: translate(-50%, -50%);
+  font-family:serif;
+  color: white;
+}
+
+.headerPic p {
+  font-size: 15px;
+  width: 800px;
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-family: 'Comfortaa', cursive;
+  opacity: 0.8;
+  line-height: 20px;
+}
+
+/*
+  Navigator
+*/
+.controlBar {
+  height: 25px;
+  width: 1015px;
+  background: #eaeaec;
+  margin:0 auto;
+  border: 10px;
+  border-radius: 3px 3px 0 0;
+  padding-left: 5px;
+}
+
+.fa-circle {
+  margin: 5px 0 0 5px;
+}
+
+.redCir {
+  color: #fc6155;
+}
+
+.yellowCir {
+  color: #ffbe37;
+}
+
+.greenCir {
+  color: #43c757;
+}
+
+/* Iframe Folder + Container*/
+section {
+  width: 1000px;
+  margin:0 auto;
+  border: 10px solid white;
+  border-radius: 0 0 3px 3px;
+  background: white;
+  height: 573px;
+  position: relative;
+  overflow: auto;
+  z-index: 1;
+}
+
+#folder {
+  width: 100%;
+  height: 560px;
+}
+
+div.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  text-align: center;
+}
+
+span.tload {
+  font-family: 'Comfortaa', cursive;
+  text-align: center;
+  position: absolute;
+  left: -5px;
+}
+
+
+
+
+/*
+nav {
+  width: 990px;
+  margin:0 auto;
+  height: 25px;
+}
+
+nav button {
+  width: 110px;
+  height: 25px;
+  margin-right: 10px;
+  background: #fff0b3;
+  border: none;
+  outline: none;
+  border-radius: 3px 3px 0 0;
+  transition: 0.7s;
+  cursor: pointer;
+}
+
+nav button:focus {
+  background-color: #ffe066;
+}
+*/
+
+/*
+  Social
+*/
+aside {
+  width: 100%;
+  height:750px;
+  position: relative;
+  background: url('../image/shadow.png') no-repeat #303030 top;
+}
+
+#contact {
+  width: 990px;
+  margin: 0 auto;
+}
+#contact ul {
+  padding: 1px;
+}
+
+#contact ul li {
+  font-size : 8em;
+  margin: 0.3em 2em;
+}
+
+#contact ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  transition: 0.4s;
+}
+
+#contact ul li a:hover {
+  color: #ffbe37;
+  opacity: 0.8;
+}
+
+.fa-linkedin-square {
+  color: #0077b5;
+}
+
+.fa-github {
+  color: white;
+}
+
+.fa-envelope-o {
+  color: #ffbe37;
+}
+
+#contact ul li > *{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* clear float */
+#clear {
+  padding-top: 100px;
+  clear: both;
+  background: #303030;
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+  padding-bottom: 10px;
+}
+
+#clear a {
+  color: #ffbe37;
+  text-decoration: none;
+}
+
+#clear a:visited {
+  color: #ffbe37;
+}
