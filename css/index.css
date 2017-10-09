@@ -77,7 +77,8 @@ div.bar {
   transform: scale(0.93,0.93);
 }
 
-#positionFolder1, #positionFolder2, #positionFolder3 {
+#positionFolder1, #positionFolder2,
+#positionFolder3 {
   width: 100px;
   height: 80px;
   position: absolute;
@@ -164,7 +165,7 @@ div.bar {
   color: white;
 }
 
-.headerPic h2 {
+.headerPic .h2 {
   font-size: 20px;
   position: absolute;
   top: 60%;
@@ -230,9 +231,20 @@ section {
   z-index: 1;
 }
 
-#folder {
+#windowTitle {
   width: 100%;
-  height: 560px;
+  height: 40px;
+  border-bottom: 1px #97befc solid;
+  position: relative;
+}
+
+#windowTitle h2 {
+
+  font-weight: bold;
+  position: absolute;
+  font-family: 'Poiret One', cursive;
+  font-size: 30px;
+  left: 10%;
 }
 
 div.loading {

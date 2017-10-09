@@ -1,44 +1,31 @@
 var presentIco = document.getElementById('presentation');
 var frontEndIco = document.getElementById('front-end');
 var extraIco = document.getElementById('extra');
-var contentWindow = document.getElementById("content");
+var content = document.getElementById("content");
+var winTitle = document.getElementById("windowTitle")
 
-if (contentWindow.innerHTML !== "") {
-  contentWindow.innerHTML = ""
-  presentPage();
-}
 
 presentIco.addEventListener('click', presentPage)
 frontEndIco.addEventListener('click', frontEndPage)
-extraIco.addEventListener('click', load_page)
+extraIco.addEventListener('click', extraPage)
 
 
-//Change the page with the Navigator's buttons and Folders Icon
-function load_page() {
-  var con = document.getElementById('content')
-  con.className = "extra"
-  var data = new XMLHttpRequest();
-
-   data.onreadystatechange = function (e) {
-    if (data.readyState == 4 && data.status == 200) {
-     con.innerHTML = data.responseText;
-    }
-   }
-
- data.open("GET", "extra.html", true);
- data.setRequestHeader('Content-type', 'text/html');
- data.send();
+//First CapitalLetter
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-//Function for load page in #container with the "presentation page" information
-function presentPage(e) {
-  var con = document.getElementById('content')
-  con.className = "presentPage"
+//Presentation Page
+function presentPage(x) {
+  var title = this.id
+  var titleName = capitalizeFirstLetter(title);
+  winTitle.firstElementChild.innerHTML = titleName
+  content.className = "presentPage";
   var data = new XMLHttpRequest();
 
    data.onreadystatechange = function (e) {
     if (data.readyState == 4 && data.status == 200) {
-     con.innerHTML = data.responseText;
+     content.innerHTML = data.responseText;
     }
    }
 
@@ -47,11 +34,14 @@ function presentPage(e) {
  data.send();
 }
 
-
-//Function for load page in #container with the Front End Database
+//Front-end Page
 function frontEndPage(){
-  if (contentWindow.className !== "frontEndPage"){
-    document.getElementById('content').innerHTML = ""
+  if (content.className !== "frontEndPage"){
+
+    var title = this.id
+    var titleName = capitalizeFirstLetter(title);
+    winTitle.firstElementChild.innerHTML = titleName
+    content.innerHTML = "";
     var data = new XMLHttpRequest();
 
 
@@ -63,7 +53,6 @@ function frontEndPage(){
 
           var div = document.createElement("DIV");
           div.className = "file";
-
           var li = document.createElement("LI");
           var img = document.createElement("IMG");
           var buttonNode = document.createElement("BUTTON")
@@ -89,7 +78,6 @@ function frontEndPage(){
           div.appendChild(buttonNodeTwo);
           buttonNodeTwo.addEventListener("click",goPage)
 
-          var content = document.querySelector('#content');
           content.appendChild(div)
           content.className = "frontEndPage"
 
@@ -98,18 +86,14 @@ function frontEndPage(){
 
     }
 
-  } else if (contentWindow.className == "frontEndPage"){
-    return
+  } else if (content.className == "frontEndPage"){
+    console.log("Same page")
   }
-
-  data.open("GET",'json/front-end.json'/*+"?t=" + Math.random()*/, true);
+  data.open("GET",'json/front-end.json'+"?t=" + Math.random(), true);
   data.send();
-
 }
 
-
-
-//redirection URL
+//Front-end Buttons
 function goPage(x){
 
   if (this.className === 'btnWindow'){
@@ -136,6 +120,26 @@ function goPage(x){
   }
 }
 
+//Extra Page
+function extraPage() {
+  var title = this.id
+  var titleName = capitalizeFirstLetter(title);
+  winTitle.firstElementChild.innerHTML = titleName
+
+
+  content.className = "extra"
+  var data = new XMLHttpRequest();
+
+   data.onreadystatechange = function (e) {
+    if (data.readyState == 4 && data.status == 200) {
+     content.innerHTML = data.responseText;
+    }
+   }
+
+ data.open("GET", "extra.html", true);
+ data.setRequestHeader('Content-type', 'text/html');
+ data.send();
+}
 
 // Clock
 function updateClock() {
